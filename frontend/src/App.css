@@ -1,0 +1,191 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  color: #333;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+/* Styles for the new image */
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* This makes images cover the area without stretching */
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.product-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Styles for the detail page */
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.product-detail img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.product-detail-info {
+  text-align: left;
+}
+
+button {
+  background-color: #007bff;
+  color: rgb(193, 158, 158);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}/* ...existing code... */
+button {
+  background-color: #007bff;
+  color: #ffe066; /* Changed from white to a yellow shade */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+/* ...existing code... *//* ...existing code... */
+button {
+  background-color: #007bff;
+  color: #1d1a0b; /* Changed from white to a yellow shade */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+/* ...existing code... */
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 10px 40px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar-cart {
+  font-size: 1.2rem;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Cart Page Styles */
+.cart-list {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+}
+
+.cart-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.cart-item-info {
+  text-align: left;
+}
+
+.cart-total {
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: right;
+  font-size: 1.5rem;
+}
+
+/* Auth Form Styles */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.auth-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Update Navbar for multiple links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-link {
+  font-size: 1.2rem;
+  color: #333;
+  text-decoration: none;
+}
