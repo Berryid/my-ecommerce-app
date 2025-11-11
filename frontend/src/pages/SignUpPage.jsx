@@ -1,14 +1,14 @@
 // In frontend/src/pages/SignUpPage.jsx
-
 import React, { useState } from 'react';
-import axios from 'axios';
+import axiosInstance from '../api/axios'; // <-- Import our instance
 import { useNavigate } from 'react-router-dom';
+import '../App.css'; // <-- Make sure CSS is imported if needed for auth-form
 
 const SignUpPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [password2, setPassword2] = useState('');
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,8 +17,9 @@ const SignUpPage = () => {
       return;
     }
     try {
-      // Send a POST request to the registration endpoint
-      await axios.post('http://127.0.0.1:8000/auth/users/', {
+      // Use the instance, just provide the path
+      // This is Djoser's endpoint for user registration
+      await axiosInstance.post('/auth/users/', {
         username: username,
         password: password,
         re_password: password2,
@@ -36,7 +37,6 @@ const SignUpPage = () => {
     <div className="App">
       <h1>Sign Up</h1>
       <form onSubmit={handleSubmit} className="auth-form">
-        {/* Form inputs are unchanged */}
         <input
           type="text"
           name="username"
@@ -50,7 +50,7 @@ const SignUpPage = () => {
           name="password"
           placeholder="Enter Password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => setPassword(e.g.target.value)}
           required
         />
         <input
